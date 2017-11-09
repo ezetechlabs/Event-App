@@ -2,16 +2,16 @@
 
 @section('content')
 
-	<h1>{{ $events->count() }} {{ str_plural('Evenement'), $events->count() }}</h1>
+	<h1>{{ $events->count() }} {{ str_plural('Evenement', $events->count())  }}</h1>
 
-	@if(count($events)> 0)
+	@if(! $events->isEmpty())
 	<ul>
 		@foreach($events as $event)
 		<li><a href="{{ route('events.show', $event) }}">{{ $event->title }}</a></li>
 		@endforeach
 	</ul>
 	@else
-	<p>Aucun evenement pour le moment.</p>
+	<p>Aucun &eacutevenement pour le moment.</p>
 
 	@endif
 

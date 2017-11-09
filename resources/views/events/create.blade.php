@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<h1>Creer un evenement</h1>
+	<h1>Cr&eacuteer un &eacutevenement</h1>
 	<form action="{{ route('events.store') }}" method="POST">
 		{{ csrf_field() }}
 		<div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">

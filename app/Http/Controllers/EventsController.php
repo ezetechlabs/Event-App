@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EventFormRequest;
 use Illuminate\Http\Request;
 use App\Models\Event;
 
@@ -34,14 +35,16 @@ class EventsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EventFormRequest $request)
     {
 
-      $this->validate($request,
+     /* $this->validate($request,
         [
             'title'=>'required|min:3',
             'description'=>'required|min:5',
-        ]);
+        ]);**/
+
+
        Event::create(['title'=>$request->title, 'description'=>$request->description]);
        return redirect()->route('home');
     }

@@ -13,7 +13,7 @@
 	</form>
 	<hr>
 	<p>
-		<a href="{{ route('home') }}">Tous les evenements</a>
+		<a href="{{ route('home') }}">Tous les &eacutevenements</a>
 	</p>
 	
 
